@@ -1,19 +1,27 @@
 module.exports = {
-  purge: [],
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        blue: "#ffd428",
-        grey: "#4e586e",
+        blue: "#242A38",
+        grey: "#4E596F",
         white: "#ffffff",
-        pink: "#f54b64",
-        orange: "#f78361",
+        pink: "#F54D64",
+        orange: "#F88161",
+      },
+      fontFamily: {
+        raleway: ["Raleway", "sans-serif"],
+      },
+      transitionDuration: {
+        2000: "2000ms",
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      // transitionProperty: { top: "top", right: "right" },
+    },
   },
   plugins: [],
 };
