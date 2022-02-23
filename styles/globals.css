@@ -6,6 +6,7 @@
 @layer base {
   body {
     @apply bg-blue text-white font-raleway;
+    /* width */
   }
 }
 .iframe {
@@ -19,4 +20,12 @@
 
 .perspective {
   perspective: 400px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background: #555;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #f88161, #f54d64);
 }
