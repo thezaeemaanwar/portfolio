@@ -37,7 +37,7 @@ export default function Home() {
 
   useEffect(() => {
     setOpacity(100);
-  }, []);
+  }, [setOpacity]);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -122,10 +122,7 @@ export default function Home() {
               </li>
               <li className="text-xl leading-10">
                 Graphic Design Lead at{" "}
-                <a
-                  href="https://kaarekamal.org/"
-                  className="border-b-2"
-                >
+                <a href="https://kaarekamal.org/" className="border-b-2">
                   Kaar-e-Kamal Welfare Organization
                 </a>
               </li>
