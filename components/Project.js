@@ -4,20 +4,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Project = ({ project }) => {
   return (
     <div
-      className={`w-full flex h-screen items-center justify-center ${
+      className={`w-full flex  flex-col-reverse md:flex-row md:h-screen items-center justify-center md:${
         project.id % 2 === 0 ? "flex-row-reverse" : "flex-row"
       }`}
     >
-      <div className="perspective w-3/5 p-10 h-full flex items-center">
+      <div className="hidden md:visible md:perspective w-full my-3 md:my-0 md:w-3/5 md:p-10 md:h-full md:flex items-center">
         <iframe
-          className={`w-full h-4/5 bg-white shadow-lg rounded-lg ${
+          className={`w-full h-full md:h-4/5 bg-white shadow-lg rounded-lg md:${
             project.id % 2 === 0 ? "neg-iframe" : "iframe"
           }`}
           src={project.url}
           title={project.name}
         ></iframe>
       </div>
-      <div className=" w-1/3 bg-white bg-opacity-5 h-2/3 rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10 p-8 flex flex-col justify-between">
+      <div className="w-full my-5 md:my-0 md:w-1/3 bg-white bg-opacity-5 md:h-2/3 rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10 p-8 flex flex-col justify-between">
         <a href={project.url}>
           <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg pb-2 pr-6 border-pink border-b-2">
             {project.name}
@@ -38,7 +38,7 @@ const Project = ({ project }) => {
           <div className="pr-2">
             <FontAwesomeIcon icon={faGithub} />
           </div>
-          <a href={project.githubUrl} className="border-b-2">
+          <a href={project.githubUrl} className="border-b-2 break-all">
             {project.githubUrl.substring(18)}
           </a>
         </div>

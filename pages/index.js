@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="w-full flex items-center justify-center">
       <div
-        className={`opacity-${opacity} transition-opacity ease-in duration-1000 fixed 
+        className={`hidden md:visible opacity-${opacity} transition-opacity ease-in duration-1000 fixed 
           text-6xl h-48 w-48 bg-gradient-to-r from-pink to-orange shadow-lg rounded-full`}
         style={{
           top: `${position.y * 100}px`,
@@ -61,38 +61,38 @@ export default function Home() {
       ></div>
       <div className="w-10/12">
         <div
-          className={`flex items-center w-full justify-between opacity-${opacity} transition-opacity ease-in duration-2000`}
+          className={`flex flex-col-reverse md:flex-row items-center w-full justify-around md:justify-between opacity-${opacity} transition-opacity ease-in duration-2000`}
           style={{ height: "calc(100vh - 56px)" }}
         >
-          <div className="w-1/2  h-3/4 flex justify-center items-center">
-            <div className="w-2/3 bg-white bg-opacity-5 h-full rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10"></div>
+          <div className="w-full md:w-1/2  h-2/4 md:h-3/4 flex justify-center items-center">
+            <div className="w-full md:w-2/3 bg-white bg-opacity-5 h-full rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10"></div>
             <div className="z-20 absolute grid grid-cols-3 grid-rows-4">
-              <div className="text-9xl font-extrabold filter drop-shadow-xl col-span-2 col-start-2">
+              <div className="text-5xl md:text-9xl font-extrabold filter drop-shadow-xl col-span-2 col-start-2">
                 <Icon icon={faCode} />
               </div>
-              <div className="text-7xl font-extrabold filter drop-shadow-xl col-start-1">
+              <div className="text-4xl md:text-7xl font-extrabold filter drop-shadow-xl col-start-1">
                 <Icon icon={faJsSquare} />
               </div>
-              <div className="text-8xl font-extrabold filter drop-shadow-xl col-start-3 place-self-end">
+              <div className="text-5xl md:text-8xl font-extrabold filter drop-shadow-xl col-start-3 place-self-end">
                 <Icon icon={faNode} />
               </div>
-              <div className="text-8xl font-extrabold filter drop-shadow-xl col-start-2 place-self-start">
+              <div className="text-5xl md:text-8xl font-extrabold filter drop-shadow-xl col-start-2 place-self-start">
                 <Icon icon={faGithub} />
               </div>
-              <div className="text-4xl font-extrabold filter drop-shadow-xl col-start-3 place-self-end">
+              <div className="text-2xl md:text-4xl font-extrabold filter drop-shadow-xl col-start-3 place-self-end">
                 <Icon icon={faDesktop} />
               </div>
-              <div className="text-7xl font-extrabold filter drop-shadow-xl col-start-1">
+              <div className="text-4xl md:text-7xl font-extrabold filter drop-shadow-xl col-start-1">
                 <Icon icon={faCss3} />
               </div>
-              <div className="text-6xl font-extrabold filter drop-shadow-xl col-start-3">
+              <div className="text-3xl md:text-6xl font-extrabold filter drop-shadow-xl col-start-3">
                 <Icon icon={faCodeBranch} />
               </div>
             </div>
           </div>
-          <div className="text-6xl text-right">
+          <div className="text-3xl md:text-6xl text-right z-10">
             <h1>Hello, I am</h1>
-            <h1 className="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg">
+            <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg">
               Zaeema <br />
               Anwar
             </h1>
@@ -162,7 +162,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

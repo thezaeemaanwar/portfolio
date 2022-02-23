@@ -3,7 +3,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="h-14 w-full sm:w-10/12 flex border-b-10 border-grey items-center justify-between hover:cursor-pointer">
+      <div className="h-18 md:h-14 p-3 w-full sm:w-10/12 flex flex-col sm:flex-row border-b-10 border-grey items-center justify-between hover:cursor-pointer">
         <Link href="/" passHref>
           <div className="cursor-pointer">thezaeemaanwar</div>
         </Link>
