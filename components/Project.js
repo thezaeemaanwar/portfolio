@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Project = ({ project }) => {
   return (
     <div
-      className={`w-full flex  flex-col-reverse md:flex-row md:h-screen items-center justify-center md:${
+      className={`w-full flex  flex-col-reverse md:h-screen items-center justify-center md:${
         project.id % 2 === 0 ? "flex-row-reverse" : "flex-row"
       }`}
     >
