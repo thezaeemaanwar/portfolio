@@ -8,9 +8,9 @@ const Project = ({ project }) => {
         project.id % 2 === 0 ? "flex-row-reverse" : "flex-row"
       }`}
     >
-      <div className="hidden md:visible md:perspective w-full my-3 md:my-0 md:w-3/5 md:p-10 md:h-full md:flex items-center">
+      <div className="hidden perspective w-3/5 p-10 h-full md:flex items-center">
         <iframe
-          className={`w-full h-full md:h-4/5 bg-white shadow-lg rounded-lg md:${
+          className={`w-full h-4/5 bg-white shadow-lg rounded-lg ${
             project.id % 2 === 0 ? "neg-iframe" : "iframe"
           }`}
           src={project.url}
