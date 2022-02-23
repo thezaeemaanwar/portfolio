@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="w-full flex items-center justify-center">
       <div
-        className={`hidden md:visible opacity-${opacity} transition-opacity ease-in duration-1000 fixed 
+        className={`hidden md:block opacity-${opacity} transition-opacity ease-in duration-1000 fixed 
           text-6xl h-48 w-48 bg-gradient-to-r from-pink to-orange shadow-lg rounded-full`}
         style={{
           top: `${position.y * 100}px`,
