@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Project = ({ project }) => {
   return (
     <div
-      className={`w-full flex  flex-col-reverse md:h-screen items-center justify-center md:${
-        project.id % 2 === 0 ? "flex-row-reverse" : "flex-row"
+      className={`w-full flex flex-col-reverse md:h-screen items-center justify-center ${
+        project.id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
       }`}
     >
       <div className="hidden perspective w-3/5 p-10 h-full md:flex items-center">
