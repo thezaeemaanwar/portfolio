@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className=" w-full flex items-center justify-center p-10 md:p-20">
       <div className="text-lg w-full sm:w-3/4 bg-opacity-5 bg-accent-text p-10 sm:p-24 my-5 rounded-lg shadow-lg mb-10">
-        <h1 className="text-4xl font-bold leading-10 text-transparent bg-clip-text bg-gradient-to-tr from-primary to-orange filter drop-shadow-lg border-primary pb-4 border-b-2">
+        <h1 className="text-4xl font-bold leading-10 text-primary filter drop-shadow-lg border-primary pb-4 border-b-2">
           Contact Me
         </h1>
         <ul className="w-full">

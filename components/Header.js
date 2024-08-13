@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="w-full flex items-center justify-center">
-      <div className="h-18 md:h-14 p-3 w-full sm:w-10/12 flex flex-col sm:flex-row border-b-10 border-secondary items-center justify-between hover:cursor-pointer">
+    <header className="w-full flex items-center justify-center bg-background">
+      <div className="h-18 md:h-14 p-3 w-full sm:w-11/12 flex flex-col sm:flex-row border-b-10 border-secondary items-center justify-between hover:cursor-pointer">
         <Link href="/" passHref>
           <div className="cursor-pointer">thezaeemaanwar</div>
         </Link>
@@ -19,7 +19,7 @@ const Header = () => {
           </Link>
         </ul>
       </div>
-    </div>
+    </header>
   );
 };
 

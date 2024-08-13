@@ -5,14 +5,15 @@
 
 @layer base {
   body {
-    @apply bg-background text-accent-text font-raleway;
-    /* width */
+    @apply bg-background text-secondary font-raleway;
   }
 }
+
 .iframe {
   transform-style: preserve-3d;
   transform: rotateY(3deg);
 }
+
 .neg-iframe {
   transform-style: preserve-3d;
   transform: rotateY(-3deg);
@@ -21,11 +22,13 @@
 .perspective {
   perspective: 400px;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
   background: #555;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: linear-gradient(to bottom, #f88161, #f54d64);
+  background: #4B0082;
 }
