@@ -53,7 +53,7 @@ export default function Home() {
     <div className="w-full flex items-center justify-center">
       <div
         className={`hidden md:block opacity-${opacity} transition-opacity ease-in duration-1000 fixed 
-          text-6xl h-48 w-48 bg-gradient-to-r from-pink to-orange shadow-lg rounded-full`}
+          text-6xl h-48 w-48 bg-gradient-to-r from-primary to-orange shadow-lg rounded-full`}
         style={{
           top: `${position.y * 100}px`,
           left: `${position.x * 100}px`,
@@ -65,7 +65,7 @@ export default function Home() {
           style={{ height: "calc(100vh - 56px)" }}
         >
           <div className="w-full md:w-1/2  h-2/4 md:h-3/4 flex justify-center items-center">
-            <div className="w-full md:w-2/3 bg-white bg-opacity-5 h-full rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10"></div>
+            <div className="w-full md:w-2/3 bg-accent-text bg-opacity-5 h-full rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10"></div>
             <div className="z-20 absolute grid grid-cols-3 grid-rows-4">
               <div className="text-5xl md:text-9xl font-extrabold filter drop-shadow-xl col-span-2 col-start-2">
                 <Icon icon={faCode} />
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className="text-3xl md:text-6xl text-right z-10">
             <h1>Hello, I am</h1>
-            <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg">
+            <h1 className="text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-primary to-orange filter drop-shadow-lg">
               Zaeema <br />
               Anwar
             </h1>
@@ -101,7 +101,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col w-full">
           <div className="py-10">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg pb-2 pr-6 border-pink border-b-2">
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-primary to-orange filter drop-shadow-lg pb-2 pr-6 border-primary border-b-2">
               Current Placements
             </div>
             <ul className="py-2">
@@ -129,7 +129,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="py-10">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg pb-2 pr-6 border-pink border-b-2">
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-primary to-orange filter drop-shadow-lg pb-2 pr-6 border-primary border-b-2">
               Previous Placements
             </div>
             <ul className="py-2">
@@ -142,7 +142,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="py-10">
-            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg pb-2 pr-6 border-pink border-b-2">
+            <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-primary to-orange filter drop-shadow-lg pb-2 pr-6 border-primary border-b-2">
               Educational Background
             </div>
             <ul className="py-2">
