@@ -1,0 +1,35 @@
+export default [
+	{
+		id: 1,
+		logo: "/images/arbisoft.png",
+		companyName: "Arbisoft",
+		title: "Full-Stack Software Engineer",
+		starting: "May 2022",
+		ending: "Present",
+		url: "https://arbisoft.com",
+		techStack: ["React", "Django", "Tailwind CSS", "Styled Components", "REST", "Chart.js", "Celery", "Redis"],
+		details: [
+			"During my time at Arbisoft, I had the opportunity to weave magic into a variety of projects. Whether it was crafting sleek mobile pages that danced to life with React and Styled Components, or breathing new efficiency into legacy systems like the Badges App on the edX platform, I took pride in every line of code. My efforts didn’t just end with aesthetics; I also fortified backend processes, like integrating Google SSO for secure user authentication and implementing OpenPGP encryption to keep data safe.",
+			"One of my most memorable quests involved building a powerful form builder for customer satisfaction surveys, complete with real-time previews and detailed analytics, ensuring every piece of feedback was captured with precision. I also architected a scalable Django-based school application and created intuitive analytics dashboards that made data visualization feel like second nature. ",
+			"Through it all, my journey at Arbisoft was about more than just the tasks at hand—it was about bringing ideas to life with a blend of creativity, technical skill, and a touch of enchantment.",
+		],
+	},
+	{
+		id: 2,
+		logo: "/images/arbisoft.png",
+		companyName: "Arbisoft",
+		title: "Software Engineer",
+		starting: "May 2022",
+		ending: "Present",
+		url: "https://arbisoft.com",
+	},
+	{
+		id: 3,
+		logo: "/images/arbisoft.png",
+		companyName: "Arbisoft",
+		title: "Software Engineer",
+		starting: "May 2022",
+		ending: "Present",
+		url: "https://arbisoft.com",
+	},
+];
