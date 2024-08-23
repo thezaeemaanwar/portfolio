@@ -5,22 +5,8 @@
 
 @layer base {
   body {
-    @apply bg-background text-secondary font-raleway;
+    @apply bg-background text-secondary font-raleway max-md:text-sm;
   }
-}
-
-.iframe {
-  transform-style: preserve-3d;
-  transform: rotateY(3deg);
-}
-
-.neg-iframe {
-  transform-style: preserve-3d;
-  transform: rotateY(-3deg);
-}
-
-.perspective {
-  perspective: 400px;
 }
 
 ::-webkit-scrollbar {

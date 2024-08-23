@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('/images/hero.svg')",
+        'illustration-2': "url('/images/illustration02.svg')",
         'gradient-conic': 'conic-gradient( var(--tw-gradient-stops))',
         'gradient-border': 'linear-gradient(to bottom, var(--tw-gradient-from) 50%,  var(--tw-gradient-to) 50%)'
       },

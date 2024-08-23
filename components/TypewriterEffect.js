@@ -15,10 +15,14 @@ const typeWriterAnimationVariants = {
 const TypewriterEffect = ({text, className}) => {
 	return (
 		<motion.span initial='hidden' animate='visible' transition={{staggerChildren: 0.1}} className={className}>
-			{text.split("").map((char, idx) => (
-				<motion.span className='inline-block' variants={typeWriterAnimationVariants} key={idx}>
-					{char}
-				</motion.span>
+			{text.split(" ").map((word) => (
+				<>
+					{word.split("").map((char, idx) => (
+						<motion.span className='inline-block' variants={typeWriterAnimationVariants} key={idx}>
+							{char}
+						</motion.span>
+					))}{" "}
+				</>
 			))}
 		</motion.span>
 	);

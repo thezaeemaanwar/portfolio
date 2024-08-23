@@ -5,7 +5,7 @@ const fill1 = "#3b3b3b";
 
 const Backdrop = () => {
 	return (
-		<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1366 768' className='absolute h-screen w-full top-0 z-0'>
+		<svg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1366 768' className='absolute  h-96 md:h-screen w-full top-0 z-0'>
 			<defs>
 				<style>{'.cls-1 { fill: "#3b3b3b"; } .cls-2 { fill: "transparent"; }'}</style>
 			</defs>
