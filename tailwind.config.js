@@ -4,17 +4,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: "#242A38",
-        grey: "#4E596F",
-        white: "#ffffff",
-        pink: "#F54D64",
-        orange: "#F88161",
+        primary: "#4B0082", // purple
+        secondary: "#3B3B3B", // slate gray
+        accent: "#E6E6FA", // lavender
+        background: "#e0dede", // Light grey
+        foreground: "#2C2C2C", // Dark Gray
       },
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
       },
       transitionDuration: {
         2000: "2000ms",
+      },
+      backgroundImage: {
+        'hero': "url('/images/hero.svg')",
+        'illustration-2': "url('/images/illustration02.svg')",
+        'gradient-conic': 'conic-gradient( var(--tw-gradient-stops))',
+        'gradient-border': 'linear-gradient(to bottom, var(--tw-gradient-from) 50%,  var(--tw-gradient-to) 50%)'
       },
     },
   },

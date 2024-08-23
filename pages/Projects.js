@@ -1,13 +1,14 @@
-import { projectsData } from "../components/Data/projectsData";
-import Project from "../components/Project";
+import {projectsData} from "../components/Data/projectsData";
+import ProjectCard from "../components/Project";
+
 const Projects = () => {
-  return (
-    <div className="mt-5 md:mt-0">
-      {projectsData.map((proj) => (
-        <Project key={proj.id} project={proj} />
-      ))}
-    </div>
-  );
+	return (
+		<div className='flex flex-col mx-4 md:mx-24 my-4 md:my-10'>
+			{projectsData.map((proj, idx) => (
+				<ProjectCard key={proj.id} project={proj} index={idx} />
+			))}
+		</div>
+	);
 };
 
 export default Projects;

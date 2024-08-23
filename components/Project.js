@@ -1,50 +1,52 @@
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+"use-client";
 
-const Project = ({ project }) => {
-  return (
-    <div
-      className={`w-full flex flex-col-reverse md:h-screen items-center justify-center ${
-        project.id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-      }`}
-    >
-      <div className="hidden perspective w-3/5 p-10 h-full md:flex items-center">
-        <iframe
-          className={`w-full h-4/5 bg-white shadow-lg rounded-lg ${
-            project.id % 2 === 0 ? "neg-iframe" : "iframe"
-          }`}
-          src={project.url}
-          title={project.name}
-        ></iframe>
-      </div>
-      <div className="w-full my-5 md:my-0 md:w-1/3 bg-white bg-opacity-5 md:h-2/3 rounded-lg shadow-xl backdrop-filter backdrop-blur-sm z-10 p-8 flex flex-col justify-between">
-        <a href={project.url}>
-          <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg pb-2 pr-6 border-pink border-b-2">
-            {project.name}
-          </div>
-        </a>
-        <div className="text-xl">{project.description}</div>
-        <div>
-          <div className="w-min font-bold text-xl text-transparent bg-clip-text bg-gradient-to-tr from-pink to-orange filter drop-shadow-lg pb-2 mb-2 border-pink border-b-2">
-            TechStack
-          </div>
-          <div>
-            {project.techStack.map((tech, id) => (
-              <div key={id}>{tech}</div>
-            ))}
-          </div>
-        </div>
-        <div className="text-lg flex pt-4">
-          <div className="pr-2">
-            <FontAwesomeIcon icon={faGithub} />
-          </div>
-          <a href={project.githubUrl} className="border-b-2 break-all">
-            {project.githubUrl.substring(18)}
-          </a>
-        </div>
-      </div>
-    </div>
-  );
+import React from "react";
+import {motion} from "framer-motion";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
+
+const ProjectCard = ({project, index}) => {
+	return (
+		<motion.div
+			className={`w-full md:w-2/3 rounded-lg my-2 md:m-4 p-0.5 ${index % 2 === 0 ? "self-start" : "self-end"}`}
+			style={{backgroundImage: `conic-gradient(#e0dede 0%, #4B0082 100%)`}}
+			initial={{opacity: 0, backgroundImage: `conic-gradient(#e0dede 100%, #4B0082 100% 100%)`}}
+			whileInView={{opacity: 1, backgroundImage: `conic-gradient(#e0dede 0%, #4B0082 0% 100%)`}}
+			transition={{ease: "linear", duration: 2}}
+		>
+			<div className='rounded-md bg-background flex flex-col w-full p-4 md:p-12'>
+				<h2 className='text-foreground text-2xl md:text-4xl font-bold opacity-70 bg-gradient-border from-transparent to-accent w-min pr-1 whitespace-nowrap'>
+					{project.name}
+				</h2>
+				<span className='h-[1px] w-full bg-foreground opacity-70 my-4' />
+				<div>
+					{project.details?.map((detailsParagraph, idx) => (
+						<p key={idx} className='my-2'>
+							{detailsParagraph}
+						</p>
+					))}
+				</div>
+				{project.githubUrl && <div className='flex my-2'>
+					<div className='pr-2'>
+						<FontAwesomeIcon icon={faGithub} />
+					</div>
+					<a href={project.githubUrl} className='border-b-2 border-accent hover:border-primary break-all'>
+						{project.githubUrl.substring(18)}
+					</a>
+				</div>}
+				<div className='w-full flex flex-wrap gap-3 my-2'>
+					{project.techStack?.map((tech, idx) => (
+						<span
+							key={`${project.id}-${idx}`}
+							className={` rounded-full uppercase text-xs text-center flex items-center justify-center bg-accent text-primary px-4 py-2`}
+						>
+							{tech}
+						</span>
+					))}
+				</div>
+			</div>
+		</motion.div>
+	);
 };
 
-export default Project;
+export default ProjectCard;
